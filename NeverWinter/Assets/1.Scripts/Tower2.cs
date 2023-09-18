@@ -36,10 +36,14 @@ public class Tower2 : EnemyCtrl
         }
         if (targetUnit != null)
         {
-            Vector3 viewPos = targetUnit.transform.position - shootPoint.transform.position;
+            Vector3 viewPos = targetUnit.transform.position - gameObject.transform.position;
+
+            
             Quaternion rot = Quaternion.LookRotation(viewPos);
+            //rot.y += 90;
             //해당 회전값 만큼 내 몸을 회전 시킴.
-            shootPoint.transform.rotation = Quaternion.Lerp(shootPoint.transform.rotation, rot, Time.deltaTime * 50.0f);
+            gameObject.transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, rot, Time.deltaTime * 50.0f);
+            //shootPoint.transform.rotation =;
             if (shootDelay <= 0f)
             {
                 BulletShoot();

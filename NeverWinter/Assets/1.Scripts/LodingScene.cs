@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Scene : MonoBehaviour
+public class LodingScene : MonoBehaviour
 {
     public static string nextScene;
     [SerializeField] Image progressBar;
@@ -17,7 +17,8 @@ public class Scene : MonoBehaviour
     public static void LoadScene(string sceneName)
     {
         nextScene = sceneName;
-        SceneManager.LoadScene("LoadingScene");
+        int result = Random.Range(1, 4);
+        SceneManager.LoadScene(result.ToString());
     }
 
     IEnumerator LoadScene()
@@ -29,7 +30,7 @@ public class Scene : MonoBehaviour
         while (!op.isDone)
         {
             yield return null;
-            timer += Time.deltaTime/5;
+            timer += Time.deltaTime / 3;
             if (op.progress < 0.8f)
             {
                 progressBar.fillAmount = Mathf.Lerp(progressBar.fillAmount, op.progress, timer);

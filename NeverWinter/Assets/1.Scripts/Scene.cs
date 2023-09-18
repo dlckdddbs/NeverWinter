@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Test : MonoBehaviour
+public class Scene : MonoBehaviour
 {
-    
+    // Start is called before the first frame update
     public void Move(string sceneName)
     {
-        Scene.LoadScene(sceneName);
+        LodingScene.LoadScene(sceneName);
     }
 }

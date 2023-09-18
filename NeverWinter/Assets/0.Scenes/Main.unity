@@ -882,7 +882,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2092832319}
-        m_TargetAssemblyTypeName: Test, Assembly-CSharp
+        m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 5
         m_Arguments:
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2092832313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee09d41c031357a49885043aeb2f9e41, type: 3}
+  m_Script: {fileID: 11500000, guid: b97d2352711c5b741a5526b69375c5e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
